@@ -1,10 +1,10 @@
 kr/ac/jejunu/userdao/User.java
  kr.ac.jejunu.userdao.User
-kr/ac/jejunu/userdao/JdbcContext.java
- kr.ac.jejunu.userdao.JdbcContext
 kr/ac/jejunu/userdao/StatementStrategy.java
  kr.ac.jejunu.userdao.StatementStrategy
 kr/ac/jejunu/userdao/DaoFactory.java
  kr.ac.jejunu.userdao.DaoFactory
 kr/ac/jejunu/userdao/UserDao.java
  kr.ac.jejunu.userdao.UserDao
+kr/ac/jejunu/userdao/JdbcContext.java
+ kr.ac.jejunu.userdao.JdbcContext
