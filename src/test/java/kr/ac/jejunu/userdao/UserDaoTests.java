@@ -10,6 +10,7 @@ import java.sql.SQLException;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.greaterThan;
+import static org.hamcrest.Matchers.nullValue;
 import static org.hamcrest.core.Is.is;
 
 public class UserDaoTests {
@@ -76,15 +77,14 @@ public class UserDaoTests {
     public void testDelete() throws SQLException, ClassNotFoundException {
         User user = new User();
         String name = "mina";
-        user.setName(name);
         String password = "3993";
+        user.setName(name);
         user.setPassword(password);
-
         userDao.insert(user);
 
         userDao.delete(user.getId());
-        User deletedUser = userDao.get(user.getId());
-        assertThat(deletedUser.getId(), IsNull.nullValue());
 
+        User deletedUser = userDao.get(user.getId());
+        assertThat(deletedUser, nullValue());
     }
 }
