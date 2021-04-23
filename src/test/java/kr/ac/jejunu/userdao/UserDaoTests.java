@@ -1,6 +1,6 @@
 package kr.ac.jejunu.userdao;
 
-
+import org.hamcrest.core.IsNull;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
@@ -49,4 +49,43 @@ public class UserDaoTests {
         assertThat(insertedUser.getPassword(),is(user.getPassword()));
 
     }
+    @Test
+    public void testUpdate() throws SQLException, ClassNotFoundException {
+        User user = new User();
+        String name = "mina";
+        user.setName(name);
+        String password = "3993";
+        user.setPassword(password);
+
+        userDao.insert(user);
+
+        String updateName = "pppp";
+        String updatePassword = "0000";
+
+        user.setName(updateName);
+        user.setPassword(updatePassword);
+
+        userDao.update(user);
+        User updatedUser = userDao.get(user.getId());
+
+        assertThat(updatedUser.getName(),is(updateName));
+        assertThat(updatedUser.getPassword(),is(updatePassword));
+
+    }
+    @Test
+    public void testDelete() throws SQLException, ClassNotFoundException {
+        User user = new User();
+        String name = "mina";
+        user.setName(name);
+        String password = "3993";
+        user.setPassword(password);
+
+        userDao.insert(user);
+
+        userDao.delete(user);
+        User deletedUser = userDao.get(user.getId());
+        assertThat(deletedUser.getId(), IsNull.nullValue());
+
+    }
+
 }
