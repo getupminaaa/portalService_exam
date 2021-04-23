@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kr.ac.jejunu.userdao.UserDaoTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-23T07:05:55" hostname="gangmin-aui-MacBookPro.local" time="0.352">
+  <properties/>
+  <testcase name="testGet()" classname="kr.ac.jejunu.userdao.UserDaoTests" time="0.352"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
