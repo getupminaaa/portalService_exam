@@ -4,10 +4,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class StatementStrategyForUpdate implements StatementStrategy {
+public class UpdateStatementStrategy implements StatementStrategy {
+    private User user;
+    public UpdateStatementStrategy(User user){
+        this.user = user;
+    }
+
     @Override
-    public PreparedStatement makeStatement(Object object, Connection connection) throws SQLException {
-        User user = (User) object;
+    public PreparedStatement makeStatement(Connection connection) throws SQLException {
         PreparedStatement preparedStatement = connection.prepareStatement("update portal set name = ? ,password=? where id =?");
         preparedStatement.setString(1, user.getName());
         preparedStatement.setString(2, user.getPassword());

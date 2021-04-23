@@ -23,11 +23,15 @@ public class DaoFactory {
 
     @Bean
     public UserDao userDao() {
-        return new UserDao(getDataSource());
+        return new UserDao(jdbcContext());
+    }
+    @Bean
+    public JdbcContext jdbcContext() {
+        return new JdbcContext(dataSource());
     }
 
     @Bean
-    public DataSource getDataSource() {
+    public DataSource dataSource() {
         SimpleDriverDataSource dataSource = new SimpleDriverDataSource();
         try {
             dataSource.setDriverClass((Class<? extends Driver>) Class.forName(className));
