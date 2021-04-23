@@ -40,8 +40,6 @@ public class UserDaoTests {
         String password = "3993";
         user.setPassword(password);
 
-
-
         userDao.insert(user);
 
         User insertedUser = userDao.get(user.getId());
