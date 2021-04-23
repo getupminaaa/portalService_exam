@@ -1,8 +1,8 @@
 kr/ac/jejunu/userdao/User.java
  kr.ac.jejunu.userdao.User
-kr/ac/jejunu/userdao/JejuUserDao.java
- kr.ac.jejunu.userdao.JejuUserDao
-kr/ac/jejunu/userdao/HallaUserDao.java
- kr.ac.jejunu.userdao.HallaUserDao
+kr/ac/jejunu/userdao/JejuConnectionMaker.java
+ kr.ac.jejunu.userdao.JejuConnectionMaker
+kr/ac/jejunu/userdao/ConnectionMaker.java
+ kr.ac.jejunu.userdao.ConnectionMaker
 kr/ac/jejunu/userdao/UserDao.java
  kr.ac.jejunu.userdao.UserDao
