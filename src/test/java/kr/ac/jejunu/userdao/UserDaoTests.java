@@ -87,5 +87,4 @@ public class UserDaoTests {
         assertThat(deletedUser.getId(), IsNull.nullValue());
 
     }
-
 }
